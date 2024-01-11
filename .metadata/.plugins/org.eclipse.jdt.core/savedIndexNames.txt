@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\JavaFullstack_YGM\spring_workspace\.metadata\.plugins\org.eclipse.jdt.core
+2746914624.index
