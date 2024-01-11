@@ -960,3 +960,85 @@ java.lang.Exception: The project description file (.project) for 'SpringMVC' is 
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-11 10:16:15.422
 !MESSAGE close() called when useCnt is already zero for Repository[C:\JavaFullstack_YGM\spring_workspace\.git]
+
+!ENTRY org.eclipse.core.resources 2 2 2024-01-11 10:20:25.918
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2024-01-11 10:20:25.918
+!MESSAGE The project description file (.project) for 'Servers' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2024-01-11 10:20:25.918
+!MESSAGE The project description file (.project) for 'SpringMVC' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.egit.core 4 0 2024-01-11 10:20:26.172
+!MESSAGE Missing tree ed6371e980b2b783901b3b7db90e9bac2a92d439
+!STACK 0
+org.eclipse.jgit.errors.MissingObjectException: Missing tree ed6371e980b2b783901b3b7db90e9bac2a92d439
+	at org.eclipse.jgit.internal.storage.file.WindowCursor.open(WindowCursor.java:137)
+	at org.eclipse.jgit.treewalk.CanonicalTreeParser.reset(CanonicalTreeParser.java:191)
+	at org.eclipse.jgit.treewalk.TreeWalk.parserFor(TreeWalk.java:1344)
+	at org.eclipse.jgit.treewalk.TreeWalk.addTree(TreeWalk.java:732)
+	at org.eclipse.egit.core.synchronize.GitSyncCache.loadDataFromGit(GitSyncCache.java:135)
+	at org.eclipse.egit.core.synchronize.GitSyncCache.getAllData(GitSyncCache.java:95)
+	at org.eclipse.egit.core.synchronize.GitSyncCache.mergeAllDataIntoCache(GitSyncCache.java:73)
+	at org.eclipse.egit.core.synchronize.GitResourceVariantTreeSubscriber.refresh(GitResourceVariantTreeSubscriber.java:236)
+	at org.eclipse.egit.core.synchronize.GitSubscriberMergeContext.refreshResources(GitSubscriberMergeContext.java:180)
+	at org.eclipse.egit.core.synchronize.GitSubscriberMergeContext.scanDeltaAndRefresh(GitSubscriberMergeContext.java:170)
+	at org.eclipse.egit.core.synchronize.GitSubscriberMergeContext.handleResourceChange(GitSubscriberMergeContext.java:154)
+	at org.eclipse.egit.core.synchronize.GitSubscriberMergeContext.lambda$1(GitSubscriberMergeContext.java:70)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:381)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1503)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.core 4 0 2024-01-11 10:20:27.167
+!MESSAGE Missing tree ed6371e980b2b783901b3b7db90e9bac2a92d439
+!STACK 0
+org.eclipse.jgit.errors.MissingObjectException: Missing tree ed6371e980b2b783901b3b7db90e9bac2a92d439
+	at org.eclipse.jgit.internal.storage.file.WindowCursor.open(WindowCursor.java:137)
+	at org.eclipse.jgit.treewalk.CanonicalTreeParser.reset(CanonicalTreeParser.java:191)
+	at org.eclipse.jgit.treewalk.TreeWalk.parserFor(TreeWalk.java:1344)
+	at org.eclipse.jgit.treewalk.TreeWalk.addTree(TreeWalk.java:732)
+	at org.eclipse.egit.core.synchronize.GitSyncCache.loadDataFromGit(GitSyncCache.java:135)
+	at org.eclipse.egit.core.synchronize.GitSyncCache.getAllData(GitSyncCache.java:95)
+	at org.eclipse.egit.core.synchronize.GitSyncCache.mergeAllDataIntoCache(GitSyncCache.java:73)
+	at org.eclipse.egit.core.synchronize.GitResourceVariantTreeSubscriber.refresh(GitResourceVariantTreeSubscriber.java:236)
+	at org.eclipse.egit.core.synchronize.GitSubscriberMergeContext.refreshResources(GitSubscriberMergeContext.java:180)
+	at org.eclipse.egit.core.synchronize.GitSubscriberMergeContext.scanDeltaAndRefresh(GitSubscriberMergeContext.java:170)
+	at org.eclipse.egit.core.synchronize.GitSubscriberMergeContext.handleResourceChange(GitSubscriberMergeContext.java:154)
+	at org.eclipse.egit.core.synchronize.GitSubscriberMergeContext.lambda$1(GitSubscriberMergeContext.java:70)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:381)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1503)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.core 4 0 2024-01-11 10:20:27.361
+!MESSAGE Missing tree ed6371e980b2b783901b3b7db90e9bac2a92d439
+!STACK 0
+org.eclipse.jgit.errors.MissingObjectException: Missing tree ed6371e980b2b783901b3b7db90e9bac2a92d439
+	at org.eclipse.jgit.internal.storage.file.WindowCursor.open(WindowCursor.java:137)
+	at org.eclipse.jgit.treewalk.CanonicalTreeParser.reset(CanonicalTreeParser.java:191)
+	at org.eclipse.jgit.treewalk.TreeWalk.parserFor(TreeWalk.java:1344)
+	at org.eclipse.jgit.treewalk.TreeWalk.addTree(TreeWalk.java:732)
+	at org.eclipse.egit.core.synchronize.GitSyncCache.loadDataFromGit(GitSyncCache.java:135)
+	at org.eclipse.egit.core.synchronize.GitSyncCache.getAllData(GitSyncCache.java:95)
+	at org.eclipse.egit.core.synchronize.GitSyncCache.mergeAllDataIntoCache(GitSyncCache.java:73)
+	at org.eclipse.egit.core.synchronize.GitResourceVariantTreeSubscriber.refresh(GitResourceVariantTreeSubscriber.java:236)
+	at org.eclipse.egit.core.synchronize.GitSubscriberMergeContext.refreshResources(GitSubscriberMergeContext.java:180)
+	at org.eclipse.egit.core.synchronize.GitSubscriberMergeContext.scanDeltaAndRefresh(GitSubscriberMergeContext.java:170)
+	at org.eclipse.egit.core.synchronize.GitSubscriberMergeContext.handleResourceChange(GitSubscriberMergeContext.java:154)
+	at org.eclipse.egit.core.synchronize.GitSubscriberMergeContext.lambda$1(GitSubscriberMergeContext.java:70)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:381)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1503)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
