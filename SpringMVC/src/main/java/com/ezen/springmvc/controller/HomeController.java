@@ -1,4 +1,4 @@
-package com.ezen.springmvc;
+package com.ezen.springmvc.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -48,7 +48,7 @@ public class HomeController {
 		} catch (NullPointerException e) {
 			e.printStackTrace();
 		}
-		
+			
 		log.info(dept);
 		log.info(coffee);
 		

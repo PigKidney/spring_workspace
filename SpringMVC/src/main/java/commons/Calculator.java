@@ -3,7 +3,7 @@ package commons;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-import com.ezen.springmvc.HomeController;
+import com.ezen.springmvc.controller.HomeController;
 
 public class Calculator {
 	
