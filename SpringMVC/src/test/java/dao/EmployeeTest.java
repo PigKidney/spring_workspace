@@ -31,12 +31,12 @@ public class EmployeeTest {
 	
 	@Test
 	public void test5() {
-		assertEquals(6, dao.getEmpByDept1(30));
+		assertEquals(6, dao.getEmpByDept2(30).size());
 	}
 	
 	@Test
 	public void test6() {
-		assertNull(dao.getEmpByDept1(99));
+		assertNull(dao.getEmpByDept2(99));
 	}
 
 }
