@@ -53,16 +53,7 @@
 				<!-- 수정해야함 -->
 				<select name="country_id">
 					<c:forEach items="${countries}" var="countrie">
-						<c:set value="${fruit.country_id}" var="countries" />
-						<%-- <option value="${countrie.country_id}">${countrie.country_name}</option> --%>
-						<c:choose>
-							<c:when test="${fruit.country_id != Null}">
-								<option value="${countrie}" selected="selected">${countrie.country_name}</option>
-							</c:when>
-							<c:otherwise>
-								<option value="${countrie}">${countrie.country_name}</option>
-							</c:otherwise>
-						</c:choose>
+						<option value="${countrie.country_id}">${countrie.country_name}</option>
 					</c:forEach>
 				</select>
 			</td>

@@ -51,11 +51,12 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="com.ezen.springdb.dto.CountryDTO"/>
-    <fullyQualifiedTypeName name="com.ezen.springdb.mapper.CountryMapper"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="com.ezen.springdb.dto.FruitDTO"/>
-    <fullyQualifiedTypeName name="com.ezen.springdb.mapper.FruitMapperXML"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="jdk.internal.org.jline.utils.Log"/>
     <fullyQualifiedTypeName name="lombok.extern.log4j.Log4j"/>
+    <fullyQualifiedTypeName name="com.ezen.springdb.mapper.FruitMapperXML"/>
+    <fullyQualifiedTypeName name="com.ezen.springdb.dto.FruitDTO"/>
+    <fullyQualifiedTypeName name="com.ezen.springdb.mapper.CountryMapper"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.ezen.springdb.service.FruitService"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
