@@ -6,6 +6,9 @@
 	<select id="getAll" resultType="com.ezen.springdb.dto.FruitDTO">
 		SELECT * FROM fruits
 	</select>
+	<select id="get" resultType="com.ezen.springdb.dto.FruitDTO">
+		SELECT * FROM fruits WHERE fruit_id=#{id}
+	</select>
 	<insert id="add">
 		INSERT INTO fruits(fruit_id,fruit_name,fruit_price,fruit_grade,country_id) 
 		VALUES(fruit_id.seq.nextval,#{fruit_name},#{fruit_price},#{fruit_grade},#{country_id})
@@ -15,4 +18,5 @@
 		fruit_name=#{fruit_name},fruit_price=#{fruit_price},fruit_grade=#{fruit_grade},country_id=#{country_id} 
 		WHERE fruit_id=#{fruit_id}
 	</update>
+	
 </mapper>

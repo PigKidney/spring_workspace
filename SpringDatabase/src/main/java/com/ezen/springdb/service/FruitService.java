@@ -9,6 +9,8 @@ import com.ezen.springdb.dto.FruitDTO;
 public interface FruitService {
 	int updateForm(Model model, int fruit_id);
 	
+	void getFruitList(Model model);
+	
 //	List<FruitDTO> getList();
 	void getList(Model model);
 	

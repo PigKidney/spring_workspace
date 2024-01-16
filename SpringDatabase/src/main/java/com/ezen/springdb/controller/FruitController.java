@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.ezen.springdb.dto.FruitDTO;
 import com.ezen.springdb.mapper.CountryMapper;
@@ -25,7 +26,8 @@ public class FruitController {
 	
 	@GetMapping("/fruit/list")
 	public void list(Model model) {
-		fruitService.getList(model);
+//		fruitService.getList(model);
+		fruitService.getFruitList(model);
 //		model.addAttribute("fruits", fruitService.getList());
 	}
 	
@@ -44,13 +46,15 @@ public class FruitController {
 	}
 	
 	@PostMapping("/fruit/update")
-	public String update(FruitDTO dto) {
+	public String update(FruitDTO dto , RedirectAttributes rattr) {
 		int row = fruitService.update(dto);
 		
 		if(row == 1) {
 			return "redirect:/fruit/list";
 		} else {
-			return "redirect:/fruit/list";
+			rattr.addAttribute("fruit_id",dto.getFruit_id());
+			return "redirect:/fruit/update";
+//			return "redirect:/fruit/update?fruit_id="+dto.getFruit_id();
 		}
 //		int row =  fruitMapper.update(dto);
 //		int row =  fruitMapperXML.updateFruit(dto);

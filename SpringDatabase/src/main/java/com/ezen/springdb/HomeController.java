@@ -38,7 +38,7 @@ public class HomeController {
 //		for(EmployeeDTO emp : empMapper.getAll()) {
 //			System.out.println(emp);
 //		}
-		
+		log.info(locale);
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		

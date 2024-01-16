@@ -43,6 +43,12 @@ public class FruitServiceImpl implements FruitService{
 //	}
 	
 	@Override
+	public void getFruitList(Model model) {
+		model.addAttribute("fruits", fruitMapper.getAll());
+		
+	}
+	
+	@Override
 	public void getList(Model model) {
 		model.addAttribute("fruits", fruitMapper.getAll());
 	}
@@ -51,4 +57,5 @@ public class FruitServiceImpl implements FruitService{
 	public int update(FruitDTO dto) {
 		return fruitMapper.update(dto);
 	}
+	
 }
