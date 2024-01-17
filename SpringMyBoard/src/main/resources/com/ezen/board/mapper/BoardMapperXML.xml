@@ -8,8 +8,11 @@
 	<select id="get" resultType="com.ezen.board.dto.BoardDTO">
 		SELECT * FROM myboard WHERE board_id=#{board_id}
 	</select>
-	<insert id="insert" keyProperty="board_id" >
+	<insert id="insert" parameterType="com.ezen.board.dto.BoardDTO">
+		<selectKey resultType="Integer"	keyProperty="board_id" order="BEFORE">
+			SELECT myboard_id_seq.nextval FROM dual
+		</selectKey>
 		INSERT INTO myboard(board_id,board_title,board_content,board_password,board_writer) 
-		VALUES(myboard_id_seq.nextval, #{board_title}, #{board_content},#{board_password},#{board_writer})
+		VALUES(#{board_id}, #{board_title}, #{board_content},#{board_password},#{board_writer})
 	</insert>
 </mapper>

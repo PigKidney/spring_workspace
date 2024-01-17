@@ -15,4 +15,6 @@ public interface BoardService {
 	
 	//xml
 	int insert(BoardDTO dto);
+	
+	void replyList(Model model, int board_id);
 }

@@ -37,7 +37,7 @@
 		</tr>
 		<tr>
 			<td></td>
-			<td><button type="submit" form="writeForm">글쓰기</button></td>
+			<td><button type="submit" >글쓰기</button></td>
 		</tr>
 	</table>
 	</form>

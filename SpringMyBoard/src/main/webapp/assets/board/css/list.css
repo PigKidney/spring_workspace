@@ -20,11 +20,11 @@ body{
 }
 
 .board_title > a:link {
-	color: slateblue;
+	color: orange;
 }
 
 .board_title > a:visited {
-	color: slateblue;
+	color: orange;
 }
 
 .board_id {

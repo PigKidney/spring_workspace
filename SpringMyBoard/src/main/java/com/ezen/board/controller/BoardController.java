@@ -55,4 +55,11 @@ public class BoardController {
 		}
 		
 	}
+	
+	@GetMapping("/reply")
+	public String replyPopUp(Model model, int board_id) {
+		boardService.replyList(model, board_id);
+		return "/board/reply";
+	}
+	
 }
