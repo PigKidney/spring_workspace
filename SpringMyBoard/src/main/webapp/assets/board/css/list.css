@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+body{
+	background-color: black; 
+	color: white;
+}	
+
+.board-list{
+	display: grid;
+	grid-template-columns: 50px 1fr 150px auto auto;
+}
+
+.board_title {
+	font-weight: bold;
+	cursor: : pointer;
+}
+
+.board_title > a {
+	text-decoration: none;
+}
+
+.board_title > a:link {
+	color: slateblue;
+}
+
+.board_title > a:visited {
+	color: slateblue;
+}
+
+.board_id {
+	font-weight: bold;
+	text-align: center;
+}
+
+.board-list > div {
+	border-bottom : solid orange 1px;
+}
+

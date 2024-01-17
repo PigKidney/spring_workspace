@@ -1,9 +1,6 @@
 INDEX VERSION 1.4+C:\JavaFullstack_YGM\spring_workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-600040036.index
-2536904643.index
-3320253495.index
-3582805144.index
-3413989457.index
-3168929946.index
-315257641.index
 145002494.index
+3745019342.index
+3582805144.index
+3545031353.index
+3168929946.index

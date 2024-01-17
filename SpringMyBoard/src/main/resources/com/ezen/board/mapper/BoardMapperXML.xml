@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ezen.board.mapper.BoardMapperXML">
+	<select id="getAll" resultType="com.ezen.board.dto.BoardDTO">
+		SELECT * FROM myboard ORDER BY board_id DESC
+	</select>
+	<select id="get" resultType="com.ezen.board.dto.BoardDTO">
+		SELECT * FROM myboard WHERE board_id=#{board_id}
+	</select>
+	<insert id="insert" keyProperty="board_id" >
+		INSERT INTO myboard(board_id,board_title,board_content,board_password,board_writer) 
+		VALUES(myboard_id_seq.nextval, #{board_title}, #{board_content},#{board_password},#{board_writer})
+	</insert>
+</mapper>
