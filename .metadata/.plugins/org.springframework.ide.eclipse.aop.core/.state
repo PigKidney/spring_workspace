@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
 <aop-project name="SpringMyBoard"/>
+<aop-project name="SpringREST"/>
 <aop-project name="SpringMVC"/>
 <aop-project name="SpringDatabase"/>
 <aop-project name="SpringBoard"/>

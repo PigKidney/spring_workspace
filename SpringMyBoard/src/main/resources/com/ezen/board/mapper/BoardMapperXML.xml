@@ -8,6 +8,13 @@
 	<select id="get" resultType="com.ezen.board.dto.BoardDTO">
 		SELECT * FROM myboard WHERE board_id=#{board_id}
 	</select>
+	<select id="getAllWithReplyCount" resultType="com.ezen.board.dto.BoardDTO">
+		SELECT * FROM myboard LEFT OUTER JOIN 
+		(SELECT board_id, count(*) AS reply_count FROM myreply GROUP BY board_id) 
+		USING (board_id)
+		ORDER BY board_id DESC
+	</select>
+	
 	<insert id="insert" parameterType="com.ezen.board.dto.BoardDTO">
 		<selectKey resultType="Integer"	keyProperty="board_id" order="BEFORE">
 			SELECT myboard_id_seq.nextval FROM dual

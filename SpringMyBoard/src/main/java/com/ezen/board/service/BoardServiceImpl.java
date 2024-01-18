@@ -28,16 +28,18 @@ public class BoardServiceImpl implements BoardService{
 	
 	@Override
 	public void list(Model model) {
-		List<BoardDTO> dto = boardMapper.getAll();
-		model.addAttribute("boards", dto);
-		Map<Integer, Integer> repliesCount = new HashMap<>();
-		for(BoardDTO board : dto) {
-			repliesCount.put(board.getBoard_id(), replyMapper.getRepliesCount((int)board.getBoard_id()));
-		}
-		model.addAttribute("repliesCount",repliesCount);
 		
-		List<ReplyDTO> replyDto = replyMapper.getAllReplies();
-		model.addAttribute("replies",replyDto);
+		List<BoardDTO> dto = xml.getAllWithReplyCount();
+		model.addAttribute("boards", dto);
+//		List<BoardDTO> dto = boardMapper.getAll();
+//		Map<Integer, Integer> repliesCount = new HashMap<>();
+//		for(BoardDTO board : dto) {
+//			repliesCount.put(board.getBoard_id(), replyMapper.getRepliesCount((int)board.getBoard_id()));
+//		}
+//		model.addAttribute("repliesCount",repliesCount);
+//		
+//		List<ReplyDTO> replyDto = replyMapper.getAllReplies();
+//		model.addAttribute("replies",replyDto);
 	}
 	
 	@Override

@@ -21,10 +21,12 @@
 				<div class="board-id">${board.board_id}</div>
 				<div class="board_title">
 					<a href="./detail?board_id=${bid}">${board.board_title}</a>
+					<a href="./reply?board_id=${bid}">[${board.reply_count}]</a>
+					<%-- <a href="./detail?board_id=${bid}">${board.board_title}</a>
 					<c:if test="${repliesCount.get(bid) > 0}">
-						<%-- <a href="./reply?board_id=${bid}">[${repliesCount.get(bid)}]</a> --%>
+						<a href="./reply?board_id=${bid}">[${repliesCount.get(bid)}]</a>
 						<span id="replyBtn"  id="${bid}" name="${bid}">[${repliesCount.get(bid)}]</span>
-					</c:if>
+					</c:if> --%>
 				</div>
 				<div class="board_writer">${board.board_writer}</div>
 				<div class="write_date">${board.write_date}</div>
