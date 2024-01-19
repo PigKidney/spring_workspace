@@ -15,6 +15,11 @@ public class HomeController {
 		return "home";
 	}
 	
+	@GetMapping("/quiz")
+	public String quiz() {
+		return "emp";
+	}
+	
 	@ResponseBody
 	@GetMapping(value ="/fruit", produces = "text/plain; charset=UTF-8")
 	public String fruit() {

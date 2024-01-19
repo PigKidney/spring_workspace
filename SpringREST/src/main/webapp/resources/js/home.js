@@ -3,6 +3,8 @@ const btn1 = document.getElementById('btn1');
 const btn2 = document.getElementById('btn2'); // JSON
 const btn3 = document.getElementById('btn3'); // XML
 
+const emps = document.querySelector('#employees');
+
 
 btn1.addEventListener('click', (e) =>{
     // 1. Ajax 요청 객체 생성
@@ -38,10 +40,66 @@ btn2.addEventListener('click', (e) => {
     xhttp.addEventListener('readystatechange', (e) => {
         if(xhttp.readyState === 4 && xhttp.status == 200){
             //console.dir(xhttp);
-            console.log(xhttp.responseText);
+            const cargo = xhttp.responseText;
+
+            // JSON은 javascript Object 형식의 문자열이지 오브젝트가 아니다
+            // 오브젝트로 변환하는 과정이 필요하다...
+            console.log(typeof cargo);
+            
+            const obj = JSON.parse(cargo);
+            console.log(obj);
+            console.log('employee_id:' , obj.employee_id);
+            console.log('first_name:' , obj.first_name);
+            console.log('last_name:' , obj.last_name);
+
+            const newFname = document.createElement('div');
+            const newLname = document.createElement('div');
+            const newEmpId = document.createElement('div');
+
+            newEmpId.classList.add('emp-id');
+            newFname.classList.add('emp-fname');
+            newLname.classList.add('emp-lname');
+
+            newEmpId.innerText = obj.employee_id;
+            newFname.innerText = obj.first_name;
+            newLname.innerText = obj.last_name;
+
+            emps.appendChild(newEmpId);
+            emps.appendChild(newFname);
+            emps.appendChild(newLname);
+
         }
     });
 
     xhttp.open('GET', './rest/v4');
+    xhttp.send();
+});
+
+btn3.addEventListener('click', (e) => {
+    const xhttp = new XMLHttpRequest();
+    xhttp.addEventListener('readystatechange', (e) => {
+        if(xhttp.readyState == 4 && xhttp.status == 200){
+            console.log(xhttp.responseText);
+
+            // responseXML로 전달받은 XML데이터를 document처럼 사용할 수 있다
+            console.dir(xhttp.responseXML);
+
+            const xmlDoc = xhttp.responseXML;
+            const emps = xmlDoc.getElementsByTagName('item');
+
+            console.log(emps);
+            for(let i = 0 ; i < emps.length ; i++) {
+                console.log(`### emp${i} ###`);
+                
+                const fields = emps[i].children;
+                for(let j = 0 ; j < fields.length ; j++) {
+                    console.log(fields[j].tagName, ':' , fields[j].innerHTML);
+                }  
+            }
+    
+        }
+    });
+
+    xhttp.open('GET', './rest/v6');
     xhttp.send();
 });
