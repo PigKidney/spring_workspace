@@ -18,10 +18,8 @@ public class EmployeeServiceImpl implements EmployeeService{
 	public List<EmployeeDTO> getAll(Model model) {
 		List<EmployeeDTO> emps = employeeMapper.getAll();
 		
-		while(emps.size()<10){
-			emps.remove((int)(Math.random()*emps.size()));
-		}
+		Collections.shuffle(emps);
 		
-		return emps;
+		return emps.subList(0, 10);
 	}
 }
