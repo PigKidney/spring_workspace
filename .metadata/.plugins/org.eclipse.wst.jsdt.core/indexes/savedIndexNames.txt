@@ -2,10 +2,8 @@ INDEX VERSION 1.4+C:\JavaFullstack_YGM\spring_workspace\.metadata\.plugins\org.e
 600040036.index
 2536904643.index
 145002494.index
-2298771488.index
 3745019342.index
 3582805144.index
-53433797.index
 3100723525.index
 3413989457.index
 3168929946.index
