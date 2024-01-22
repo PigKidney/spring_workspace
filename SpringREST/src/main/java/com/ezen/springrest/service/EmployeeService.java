@@ -8,5 +8,5 @@ import com.ezen.springrest.dto.EmployeeDTO;
 
 public interface EmployeeService {
 	
-	List<EmployeeDTO> getAll(Model model);
+	List<EmployeeDTO> getAll();
 }

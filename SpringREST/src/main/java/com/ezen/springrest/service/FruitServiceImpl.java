@@ -1,13 +1,12 @@
-package com.ezen.springdb.service;
+package com.ezen.springrest.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
-import com.ezen.springdb.dto.FruitDTO;
-import com.ezen.springdb.mapper.CountryMapper;
-import com.ezen.springdb.mapper.FruitMapper;
-
+import com.ezen.springrest.dto.FruitDTO;
+import com.ezen.springrest.mapper.CountryMapper;
+import com.ezen.springrest.mapper.FruitMapper;
 
 
 @Service
@@ -45,6 +44,7 @@ public class FruitServiceImpl implements FruitService{
 		model.addAttribute("fruits", fruitMapper.getAll());
 		model.addAttribute("countries", countryMapper.getAll());
 
+		
 	}
 	
 	@Override

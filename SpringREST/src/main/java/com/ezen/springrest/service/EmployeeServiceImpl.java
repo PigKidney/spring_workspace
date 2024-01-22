@@ -1,5 +1,6 @@
 package com.ezen.springrest.service;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 	EmployeeMapper employeeMapper;
 	
 	@Override
-	public List<EmployeeDTO> getAll(Model model) {
+	public List<EmployeeDTO> getAll() {
 		List<EmployeeDTO> emps = employeeMapper.getAll();
 		
 		Collections.shuffle(emps);
